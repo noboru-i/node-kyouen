@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "lint": "tslint \"index.ts\"",
-    "lint:fix": "tslint \"index.ts\" --fix",
+    "lint": "tslint \"lib/**/*.ts\"",
+    "lint:fix": "tslint \"lib/**/*.ts\" --fix",
     "build": "tsc",
     "test": "mocha --reporter spec"
   },
