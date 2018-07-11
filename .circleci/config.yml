@@ -24,5 +24,7 @@ jobs:
       - run:
           name: Test
           command: ./node_modules/.bin/mocha test --reporter mocha-junit-reporter
+          environment:
+            MOCHA_FILE: test-results/mocha/results.xml
       - store_test_results:
-          path: test-results.xml
+          path: test-results
