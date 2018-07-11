@@ -1,6 +1,6 @@
 "use strict";
 var expect = require("chai").expect;
-var Point = require("../dist/lib/point.js");
+var { Point } = require("../dist/point.js");
 
 describe("calculateAbs function", () => {
   it("should return 5", () => {
