@@ -20,6 +20,24 @@ class Line {
   public getX(y: number): number {
     return (-1 * (this.b * y + this.c)) / this.a
   }
+
+  public getIntersection(l2: Line): Point | null {
+    const f1 = this.p2.x - this.p1.x
+    const g1 = this.p2.y - this.p1.y
+    const f2 = l2.p2.x - l2.p1.x
+    const g2 = l2.p2.y - l2.p1.y
+
+    const det = f2 * g1 - f1 * g2
+    if (det === 0) {
+      return null
+    }
+
+    const dx = l2.p1.x - this.p1.x
+    const dy = l2.p1.y - this.p1.y
+    const t1 = (f2 * dy - g2 * dx) / det
+
+    return new Point(this.p1.x + f1 * t1, this.p1.y + g1 * t1)
+  }
 }
 
 export { Line }

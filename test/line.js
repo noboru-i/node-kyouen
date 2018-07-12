@@ -16,3 +16,13 @@ describe("getX function", () => {
     expect(result).to.equal(4);
   });
 });
+
+describe("getIntersection function", () => {
+  it("should return (1, 2)", () => {
+    var line2 = new Line(new Point(0, 3), new Point(4, -1));
+    var result = new Line(new Point(0, 0), new Point(0.5, 1)).getIntersection(
+      line2
+    );
+    expect(result).to.deep.equal(new Point(1, 2));
+  });
+});
