@@ -21,7 +21,7 @@ class Line {
     return (-1 * (this.b * y + this.c)) / this.a
   }
 
-  public getIntersection(l2: Line): Point | null {
+  public calculateIntersection(l2: Line): Point | null {
     const f1 = this.p2.x - this.p1.x
     const g1 = this.p2.y - this.p1.y
     const f2 = l2.p2.x - l2.p1.x

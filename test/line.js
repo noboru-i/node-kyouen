@@ -17,12 +17,13 @@ describe("getX function", () => {
   });
 });
 
-describe("getIntersection function", () => {
+describe("calculateIntersection function", () => {
   it("should return (1, 2)", () => {
     var line2 = new Line(new Point(0, 3), new Point(4, -1));
-    var result = new Line(new Point(0, 0), new Point(0.5, 1)).getIntersection(
-      line2
-    );
+    var result = new Line(
+      new Point(0, 0),
+      new Point(0.5, 1)
+    ).calculateIntersection(line2);
     expect(result).to.deep.equal(new Point(1, 2));
   });
 });
