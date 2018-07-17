@@ -1,3 +1,5 @@
+import * as Combinatorics from 'js-combinatorics'
+
 import { KyouenData } from './kyouenData'
 import { Line } from './line'
 import { Point } from './point'
@@ -11,13 +13,22 @@ class Kyouen {
     }
 
     // loop by conbination
+    const combination = Combinatorics.combination(this.points, 4)
+    let combi = combination.next()
+    while (combi) {
+      // check that tuple is kyouen
+      const p1 = combi[0]
+      const p2 = combi[1]
+      const p3 = combi[2]
+      const p4 = combi[3]
+      const kyouen = this.isKyouen(p1, p2, p3, p4)
+      if (kyouen) {
+        return kyouen
+      }
+      combi = combination.next()
+    }
 
-    // check that tuple is kyouen
-    const p1 = this.points[0]
-    const p2 = this.points[1]
-    const p3 = this.points[2]
-    const p4 = this.points[3]
-    return this.isKyouen(p1, p2, p3, p4)
+    return null
   }
 
   private isKyouen(
