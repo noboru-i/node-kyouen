@@ -1,8 +1,4 @@
-/**
- * @Method: Returns the uppercase string.
- * @Param {string}
- * @Return {string}
- */
-export function getUpperCase(str: string): string {
-  return str.toUpperCase()
-}
+export { Kyouen } from './kyouen'
+export { KyouenData } from './kyouenData'
+export { Line } from './line'
+export { Point } from './point'

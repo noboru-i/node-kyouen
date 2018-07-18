@@ -1,5 +1,5 @@
 {
-  "name": "@noboru-i/kyouen",
+  "name": "kyouen",
   "version": "0.0.1",
   "description": "Check kyouen.",
   "main": "dist/index.js",
