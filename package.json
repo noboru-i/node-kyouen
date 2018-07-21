@@ -8,7 +8,8 @@
     "lint": "tslint \"lib/**/*.ts\"",
     "lint:fix": "tslint \"lib/**/*.ts\" --fix",
     "build": "tsc",
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "prepublish": "tsc"
   },
   "repository": {
     "type": "git",
